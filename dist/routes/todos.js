@@ -7,21 +7,23 @@ router.get('/', (req, res, next) => {
     res.status(200).json({ todos });
 });
 router.post('/todo', (req, res, next) => {
+    const body = req.body;
     const newTodo = {
         id: new Date().toISOString(),
-        text: req.body.text
+        text: body.text
     };
     todos.unshift(newTodo);
     res.status(201).json({ todos });
 });
 router.put('/todo/:id', (req, res, next) => {
+    const body = req.body;
     const todoIndex = todos.findIndex(todoItem => todoItem.id === req.params.id);
     if (todoIndex < -1) {
         return res.status(404).json({ msg: 'Todo not found' });
     }
     todos[todoIndex] = {
         id: todos[todoIndex].id,
-        text: req.body.text
+        text: body.text
     };
     res.status(200).json({ msg: "Updated", todos });
 });
