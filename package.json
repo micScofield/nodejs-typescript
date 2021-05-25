@@ -1,0 +1,25 @@
+{
+  "name": "nodejs-typescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/micScofield/nodejs-typescript.git"
+  },
+  "author": "Sanyam Jain",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/micScofield/nodejs-typescript/issues"
+  },
+  "homepage": "https://github.com/micScofield/nodejs-typescript#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@types/node": "^15.6.1"
+  }
+}
